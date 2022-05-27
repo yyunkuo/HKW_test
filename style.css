@@ -9,8 +9,8 @@ html, body {
     font-family: 'EditorialNew';
     
     src: 
-    
-    url('fonts/EditorialNew-Regular.ttf') format('truetype');
+    url('./fonts/EditorialNew-Regular.woff') format('woff'),
+    url('./fonts/EditorialNew-Regular.ttf') format('truetype');
     
     font-weight: normal;
     
