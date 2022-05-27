@@ -4,8 +4,21 @@ html, body {
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans&display=swap');
+@font-face {
 
-  
+    font-family: 'EditorialNew';
+    
+    src: 
+    
+    url('fonts/EditorialNew-Regular.ttf') format('truetype');
+    
+    font-weight: normal;
+    
+    font-style: normal;
+    
+    }
+
+
 body {
 margin: 0;
 }
