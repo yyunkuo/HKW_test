@@ -1,0 +1,59 @@
+
+html, body {
+    font-family: "EditorialNew", Serif;    
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans&display=swap');
+
+  
+body {
+margin: 0;
+}
+
+#sketch-holder {
+    width: 100%;
+    height:100%;
+} 
+
+h1 {
+    font-weight: 400;
+    font-size: 60px;
+    margin-top: 0;
+    line-height: 72px;
+}
+
+h2 {
+    font-weight: 400;
+}
+
+h3 {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 400;
+    line-height: 0;
+    font-size: 24px;
+}
+
+
+#text-description1 {
+    position: absolute;
+    top: 5vh;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    text-shadow: 0px 2px 10px #ffe4dc;
+}
+#text-description2 {
+    position: absolute;
+    top: 98vh;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+}
+
+.relative {
+    position:relative;
+}
+
+.wrapper {
+    margin: 32;
+}
