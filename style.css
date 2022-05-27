@@ -13,9 +13,9 @@ html, body {
     url('./fonts/EditorialNew-Thin.woff') format('woff'),
     url('./fonts/EditorialNew-Regular.ttf') format('truetype');
     
-    font-weight: normal;
+    font-weight: thin;
     
-    font-style: normal;
+    font-style: thin;
     
     }
 
