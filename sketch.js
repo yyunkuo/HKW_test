@@ -13,7 +13,6 @@ var canvas;
 
 function preload() {
   img = loadImage('yukiko.png');
-  img2 = loadImage('hireme2.png');
 }
 
 function setup() {
@@ -24,7 +23,6 @@ function setup() {
   slider.position(windowWidth/2 - 100, 10);
 
   img.loadPixels();
-  img2.loadPixels();
   
   w = windowWidth;
   h = windowHeight;
