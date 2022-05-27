@@ -11,7 +11,8 @@ html, body {
     src: 
     url('./fonts/EditorialNew-Regular.woff') format('woff'),
     url('./fonts/EditorialNew-Thin.woff') format('woff'),
-    url('./fonts/EditorialNew-Regular.ttf') format('truetype');
+    url('./fonts/EditorialNew-Regular.ttf') format('truetype'),
+    url('./fonts/EditorialNew-Thin.ttf') format('truetype');
     
     font-weight: normal;
     
@@ -51,7 +52,7 @@ h3 {
 
 #text-description1 {
     position: absolute;
-    top: 5vh;
+    top: 6vh;
     left: 50%;
     margin-right: -50%;
     transform: translate(-50%, -50%);
