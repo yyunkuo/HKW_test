@@ -18,7 +18,7 @@ function preload() {
 function setup() {
   //slider
   slider = createSlider(0, 500, 120);
-  slider.style('width', '200px');
+  slider.style('width', '200px','height', '120px');
   slider.position(windowWidth/2 - 100, 80);
 
   img.loadPixels();
