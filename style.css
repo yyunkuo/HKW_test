@@ -57,3 +57,7 @@ h3 {
 .wrapper {
     margin: 32;
 }
+
+.container {
+    padding: 30px;
+}
