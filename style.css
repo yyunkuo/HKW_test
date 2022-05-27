@@ -13,9 +13,9 @@ html, body {
     url('./fonts/EditorialNew-Thin.woff') format('woff'),
     url('./fonts/EditorialNew-Regular.ttf') format('truetype');
     
-    font-weight: thin;
+    font-weight: normal;
     
-    font-style: thin;
+    font-style: normal;
     
     }
 
@@ -30,19 +30,19 @@ margin: 0;
 } 
 
 h1 {
-    font-weight: 300;
+    font-weight: 400;
     font-size: 60px;
     margin-top: 0;
     line-height: 72px;
 }
 
 h2 {
-    font-weight: 300;
+    font-weight: 400;
 }
 
 h3 {
     font-family: 'Plus Jakarta Sans', sans-serif;
-    font-weight: 300;
+    font-weight: 400;
     margin-top: 64px;
     line-height: 0;
     font-size: 36px;
@@ -63,6 +63,22 @@ h3 {
     left: 50%;
     margin-right: -50%;
     transform: translate(-50%, -50%);
+}
+
+#text-description3 {
+    position: absolute;
+    /* margin-top: 50%; */
+    top: 60vh;
+    left: 32px;
+    transform: translate(-50%, -50%) rotate(-90deg);
+}
+
+#text-description4 {
+    position: absolute;
+    /* margin-top: 50%; */
+    top: 30vh;
+    transform: translate(-50%, -50%);
+    left: 90vw;
 }
 
 .relative {
