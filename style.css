@@ -30,19 +30,19 @@ margin: 0;
 } 
 
 h1 {
-    font-weight: 400;
+    font-weight: 300;
     font-size: 60px;
     margin-top: 0;
     line-height: 72px;
 }
 
 h2 {
-    font-weight: 400;
+    font-weight: 300;
 }
 
 h3 {
     font-family: 'Plus Jakarta Sans', sans-serif;
-    font-weight: 400;
+    font-weight: 300;
     margin-top: 64px;
     line-height: 0;
     font-size: 36px;
