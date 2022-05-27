@@ -10,6 +10,7 @@ html, body {
     
     src: 
     url('./fonts/EditorialNew-Regular.woff') format('woff'),
+    url('./fonts/EditorialNew-Thin.woff') format('woff'),
     url('./fonts/EditorialNew-Regular.ttf') format('truetype');
     
     font-weight: normal;
