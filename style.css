@@ -180,7 +180,7 @@ body:not(.mobile) .hover-title:hover + .hover-image {
 
 /* Styles the whole slider */
 .mySliders{
-    width: 80px;
+    width: 120px;
     background-color: transparent;
     
     /* Removes some defaults */
@@ -208,14 +208,15 @@ body:not(.mobile) .hover-title:hover + .hover-image {
   
   /* This is the moveable bit of the slider, known as the "thumb"*/
   .mySliders::-webkit-slider-thumb {
-    width: 24px;
-    height: 24px;
+    width: 32px;
+    height: 32px;
     background: #000000;
     cursor: pointer;
     -webkit-appearance: none;
+    box-shadow:  0px 2px 15px rgba(0, 0, 255, 0.5);
     
     /* negative top padding moves it up */
-    margin-top: -12px;
+    margin-top: -16px;
   
     
     /* Border radius gives rounded corners, if they're big enough, you end up with circles */

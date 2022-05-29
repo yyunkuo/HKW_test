@@ -14,7 +14,7 @@ function setup() {
   
   //slider
   slider = createSlider(1, 500, 120);
-  slider.style('width', '200px','height', '120px');
+  slider.style('width', '240px','height', '120px');
   slider.addClass("mySliders");
   
   // load Yukiko
@@ -38,7 +38,7 @@ function setup() {
 }
 
 function draw() {
-  slider.position(windowWidth/2 - 100, windowHeight*0.15);
+  slider.position(windowWidth/2 - 100, windowHeight*0.16);
   // Flip the canvas so that we get a mirror image
   translate(w, 0);
   scale(-1.0, 1.0);
