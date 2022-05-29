@@ -3,6 +3,8 @@ let tracker = null;
 let positions = null;
 let img_w = 120;
 let img_h = 40;
+let webBoolen = true;
+let colorBackground = false;
 
 function preload(){
   img = loadImage('yukiko.png');
@@ -43,8 +45,11 @@ function draw() {
   img_w = slider.value();
   img_h = img_w * 0.482;
 
-  // webcam image
-  image(capture, 0, 0, w, h);
+  if(webBoolen) {
+    // webcam image
+    image(capture, 0, 0, w, h);  
+  } 
+  
   positions = tracker.getCurrentPosition();
 
   if (positions.length > 0) {
@@ -89,14 +94,16 @@ function windowResized() {
 function keyTyped() {
 
   if(key==='1') {
-    img_w = 100; 
+    webBoolen = false;
     background('rgb(220, 0, 0)');  
   }
   if(key==='2') {
+    webBoolen = false;
     background('rgb(0, 220, 0)'); 
   }
 
   if(key==='3') {
+    webBoolen = false;
     background('rgb(0, 0, 220)'); 
   }
 
