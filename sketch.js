@@ -1,9 +1,3 @@
-// Finds eyes from webcam and draws a representation of them on
-// the canvas, with random colors for the irises. Click on the
-// canvas to save an image; press a key to clear the canvas.
-
-// Starting point: https://editor.p5js.org/kylemcdonald/sketches/BJOcyD9hm 🙏
-
 let capture = null;
 let tracker = null;
 let positions = null;
@@ -22,7 +16,6 @@ function setup() {
   
   // load Yukiko
   img.loadPixels();
-  
   
   w = windowWidth;
   h = windowHeight;
