@@ -58,7 +58,7 @@ h3 {
     margin-right: -50%;
     transform: translate(-50%, -50%);
     color: rgb(0, 0, 0);
-    text-shadow:  0px 2px 10px rgba(0, 0, 255, 0.867);
+    /* text-shadow:  0px 2px 15px rgba(0, 0, 255, 0.5); */
 }
 #text-description2 {
     position: absolute;
