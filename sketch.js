@@ -37,7 +37,7 @@ function setup() {
 }
 
 function draw() {
-  slider.position(windowWidth/2 - 100, height * 0.1);
+  slider.position(windowWidth/2 - 100, 72);
   // Flip the canvas so that we get a mirror image
   translate(w, 0);
   scale(-1.0, 1.0);
