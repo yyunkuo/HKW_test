@@ -106,6 +106,10 @@ function keyTyped() {
     webBoolen = false;
     background('rgb(0, 0, 220)'); 
   }
+  
+  if(key==='0') {
+    webBoolen = true;
+  }
 
   if(key==='s'){
     const timestamp = timestampString();
