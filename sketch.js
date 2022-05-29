@@ -9,10 +9,11 @@ let colorBackground = false;
 function preload(){
   img = loadImage('yukiko.png');
 }
+
 function setup() {
   
   //slider
-  slider = createSlider(0, 500, 120);
+  slider = createSlider(1, 500, 120);
   slider.style('width', '200px','height', '120px');
   slider.addClass("mySliders");
   
