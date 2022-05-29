@@ -39,6 +39,7 @@ h1 {
 
 h2 {
     font-weight: 400;
+    font-size: 1.5vw;
 }
 
 h3 {
@@ -52,7 +53,7 @@ h3 {
 
 #text-description1 {
     position: absolute;
-    top: 32px;
+    top: 12vh;
     left: 50%;
     margin-right: -50%;
     transform: translate(-50%, -50%);
