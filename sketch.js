@@ -13,7 +13,7 @@ function preload(){
 function setup() {
   
   //slider
-  slider = createSlider(1, 500, 120);
+  slider = createSlider(1, 900, 120);
   slider.style('width', '240px','height', '120px');
   slider.addClass("mySliders");
   
@@ -114,8 +114,7 @@ function keyTyped() {
   }
 
   if(key==='s'){
-    const timestamp = timestampString();
-    saveCanvas("yun_and_yukiko" + timestamp, "png");
+    saveCanvas("yun_and_yukiko.png");
   }
   
 }
