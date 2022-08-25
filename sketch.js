@@ -53,7 +53,7 @@ function draw() {
   let wght =  50;
   let txtsize = map(mouseX, 0, width, 10, 15);
   txt.style( "font-variation-settings", `'wght' ${wght}`);
-  txt.style( 'font-size', txtsize + 'em');
+  // txt.style( 'font-size', txtsize + 'em');
 
   // Face Recognition
   positions = tracker.getCurrentPosition();
