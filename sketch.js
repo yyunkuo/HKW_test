@@ -11,10 +11,7 @@ let face_w;
 let value2 = 1;
 var state = false;
 var addNew = true;
-
-function preload(){
-  img = loadImage('yukiko.png');
-}
+var f;
 
 function setup() {
   
@@ -36,6 +33,9 @@ function setup() {
 
   txt = select(".text");
   box = select(".box");
+
+  f = new p5.Filt();
+  f.set('lowpass', 3, 0.7);
 }
 
 function draw() {
@@ -59,22 +59,8 @@ function draw() {
   positions = tracker.getCurrentPosition();
 
   if (positions.length > 0) {
-
     // Eye points from clmtrackr:
     // https://www.auduno.com/clmtrackr/docs/reference.html
-    const eye1 = {
-      outline: [23, 63, 24, 64, 25, 65, 26, 66].map(getPoint),
-      center: getPoint(27),
-      top: getPoint(24),
-      bottom: getPoint(26)
-    };
-    const eye2 = {
-      outline: [28, 67, 29, 68, 30, 69, 31, 70].map(getPoint),
-      center: getPoint(32),
-      top: getPoint(29),
-      bottom: getPoint(31)
-    }
-
     const face = {
       center: getPoint(41),
       top: getPoint(33),
@@ -83,6 +69,8 @@ function draw() {
     }
 
     const eye_right = {
+      outline: [28, 67, 29, 68, 30, 69, 31, 70].map(getPoint),
+      center: getPoint(32),
       top: getPoint(29),
       buttom: getPoint(31)
     }
@@ -92,14 +80,15 @@ function draw() {
       buttom: getPoint(53)
     }
 
-    face_w = face.right.x - face.left.x;
+    face_w = f.tick(face.right.x - face.left.x);
+    
+    
     drawTopDeco(face);
-    hkw_animation(eye_right);
-    hkw_size(eye_left);
 
     // forward animation with right eye
     let eye_size_r = (eye_right.buttom.y - eye_right.top.y) / face_w * 10000;
-    if (eye_size_r < 600) {
+    console.log( eye_size_r);
+    if (eye_size_r < 660) {
       if (value2 < 800) {
         value2 = value2 + 40;
       } else {
@@ -124,20 +113,19 @@ function hkw_animation(input) {
   let value2 = 1;
 
   //closing right eye
-  if (value < 600) {
+  if (value < 500) {
     
     if (value2 < 800) {
       value2 = value2 + 1;
     }
-    
-    txt.style( "font-variation-settings", `'wght' ${value2}`)
+    console.log('add');
   }
-  // txt.style( "font-variation-settings", `'wght' ${value}`)
+  txt.style( "font-variation-settings", `'wght' ${value2}`)
+ 
 }
 
 function hkw_size(input) {
   let value = (input.buttom.y - input.top.y) / face_w * 200;
-  
   value = map(value, 25, 35, 20, 40);
   // txt.style( 'font-size', value + 'em');
 }
@@ -160,16 +148,13 @@ function keyTyped() {
     webBoolen = false;
     background('rgb(0, 220, 0)'); 
   }
-
   if(key==='3') {
     webBoolen = false;
     background('rgb(0, 0, 220)'); 
   }
-  
   if(key==='0') {
     webBoolen = true;
   }
-
   if(key==='s'){
     saveCanvas("yun_and_yukiko.png");
   }
