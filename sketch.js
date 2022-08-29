@@ -15,12 +15,10 @@ var f;
 
 function setup() {
   
-  w = windowWidth;
-  h = windowHeight;
   capture = createCapture(VIDEO);
-  canvas = createCanvas(w, h);
+  canvas = createCanvas(windowWidth, windowHeight);
   canvas.parent('sketch-holder');
-  capture.size(w, h);
+  capture.size(windowWidth, windowHeight);
   capture.hide();
 
   frameRate(10);
@@ -41,12 +39,12 @@ function setup() {
 function draw() {
   
   // Flip the canvas so that we get a mirror image
-  translate(w, 0);
+  translate(windowWidth, 0);
   scale(-1.0, 1.0);
 
   // webcam image
   if(webBoolen) {  
-    image(capture, 0, 0, w, h);  
+    image(capture, 0, 0, windowWidth, windowHeight);  
   } 
 
   // Give paremeters to text
@@ -72,7 +70,9 @@ function draw() {
       outline: [28, 67, 29, 68, 30, 69, 31, 70].map(getPoint),
       center: getPoint(32),
       top: getPoint(29),
-      buttom: getPoint(31)
+      buttom: getPoint(31),
+      right: getPoint(28),
+      left: getPoint(30)
     }
 
     const eye_left = {
@@ -87,7 +87,12 @@ function draw() {
 
     // forward animation with right eye
     let eye_size_r = (eye_right.buttom.y - eye_right.top.y) / face_w * 10000;
-    console.log( eye_size_r);
+    let eye_r_width = dist(eye_right.left.x, eye_right.left.y, eye_right.right.x,eye_right.right.y);
+    let eye_r_height = dist(eye_right.top.x, eye_right.top.y, eye_right.buttom.x,eye_right.buttom.y);
+    //console.log( eye_r_height/ eye_r_width);
+
+    ellipse(eye_right.top.x, eye_right.top.y, 12);
+    ellipse(eye_right.buttom.x, eye_right.buttom.y, 12);
     if (eye_size_r < 660) {
       if (value2 < 800) {
         value2 = value2 + 40;

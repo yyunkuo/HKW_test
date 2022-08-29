@@ -16,7 +16,7 @@ margin: 0;
 
 .box {
     position: absolute;
-    top: 50%;
+    top: 200px;
     left: 50%;
     margin-right: -50%;
     transform: translate(-50%, -50%);
