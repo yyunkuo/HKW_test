@@ -4,6 +4,7 @@ let tracker
 let noseX, noseY;
 let mouthX, mouthY, mouthW, mouthH;
 let eyeLX, eyeLY, eyeLH, eyeLW, eyeRX, eyeRY, eyeRH;
+let faceW;
 
 let updateTracking = function () {
   let positions = tracker.getCurrentPosition();
